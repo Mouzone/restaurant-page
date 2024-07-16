@@ -1,0 +1,16 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+header {
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+}
+
+.content {
+    font-size: 20px;
+    color: green;
+}
