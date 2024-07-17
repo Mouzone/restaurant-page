@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
-    watch: true,
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Output Management',

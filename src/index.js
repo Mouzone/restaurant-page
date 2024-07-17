@@ -1,10 +1,14 @@
 import './style.css'
+import {generateHome} from "../home";
+import {generateMenu} from "../menu";
+import {generateAbout} from "../about";
+import {generateContact} from "../contact";
 
-function component() {
-    const element = document.createElement('div');
-    element.innerHTML = 'Hello, dynamically created element!';
-    element.classList.add('content'); // Apply CSS class
-    return element;
-}
+const nav = document.querySelector("nav")
+const buttons = nav.querySelectorAll("button")
 
-document.body.appendChild(component());
+buttons.forEach(button => {
+    button.addEventListener("click", event => {
+
+    })
+})
