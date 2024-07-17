@@ -9,6 +9,16 @@ const buttons = nav.querySelectorAll("button")
 
 buttons.forEach(button => {
     button.addEventListener("click", event => {
-
+        const content = document.querySelector("#content")
+        content.innerHTML = ""
+        if ("home" in button.classList) {
+            generateHome()
+        } else if ("menu" in button.classList) {
+            generateMenu()
+        } else if ("about" in button.classList) {
+            generateAbout()
+        } else {
+            generateContact()
+        }
     })
 })
