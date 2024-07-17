@@ -9,16 +9,25 @@ const buttons = nav.querySelectorAll("button")
 
 buttons.forEach(button => {
     button.addEventListener("click", event => {
-        const content = document.querySelector("#content")
-        content.innerHTML = ""
-        if ("home" in button.classList) {
+        console.log(button)
+        const content_area = document.querySelector("#content")
+        content_area.innerHTML = ""
+
+        const existingElement = document.querySelector("button.active-tab")
+        if (existingElement) {
+            existingElement.classList.remove("active-tab")
+        }
+
+        if (button.id === "home") {
             generateHome()
-        } else if ("menu" in button.classList) {
+        } else if (button.id=== "menu") {
             generateMenu()
-        } else if ("about" in button.classList) {
+        } else if (button.id === "about") {
             generateAbout()
         } else {
             generateContact()
         }
     })
 })
+
+generateHome()
