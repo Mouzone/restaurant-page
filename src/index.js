@@ -18,6 +18,9 @@ buttons.forEach(button => {
             existingElement.classList.remove("active-tab")
         }
 
+        const to_be_active_button = document.getElementById(`${button.id}`)
+        to_be_active_button.classList.add("active-tab")
+
         if (button.id === "home") {
             generateHome()
         } else if (button.id=== "menu") {
@@ -29,5 +32,3 @@ buttons.forEach(button => {
         }
     })
 })
-
-generateHome()
