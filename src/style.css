@@ -38,7 +38,7 @@ button {
 #content {
     width: 50vw;
     height: 87vh;
-    padding: 10px;
+    padding: 20px;
     font-size: 20px;
     background-color: #dedbce;
     border-radius: 10px;
@@ -46,4 +46,13 @@ button {
 
 .active-tab {
     background-color: #dedbce;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: left;
+    margin: 20px;
 }
