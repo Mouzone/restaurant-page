@@ -56,3 +56,9 @@ p {
     text-align: left;
     margin: 20px;
 }
+
+.schedule {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+/*    make odd children left align, even children right align*/
+}
