@@ -8,6 +8,9 @@ export function generateContact(){
     const contact_info_header = document.createElement("h2")
     contact_info_header.textContent = "Contact Methods"
     contact_info.appendChild(contact_info_header)
+    contact_info.insertAdjacentHTML("beforeend", "<p class='contact'>406 Hillside Ave</p>" +
+        "<p class='contact'>Williston Park, NY 11596</p>" + "<p class='contact'>(516) 877-7839</p>")
+
 
     const hours = document.createElement("div")
     content.appendChild(hours)
