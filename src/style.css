@@ -83,5 +83,17 @@ td {
     text-align: center;
 }
 
+#menus_container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
 
+.menu {
+    color: white;
+    font-family: "Bona Nova SC", serif;
+    background-color: darkred;
+    padding: 20px;
+}
 
