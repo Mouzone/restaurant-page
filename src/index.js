@@ -8,7 +8,7 @@ tabs.forEach(tab => {
         const content_area = document.querySelector("#content")
         content_area.innerHTML = ""
 
-        const existingElement = document.querySelector("button.active-tab")
+        const existingElement = document.querySelector("h2.active-tab")
         if (existingElement) {
             existingElement.classList.remove("active-tab")
         }
@@ -24,3 +24,5 @@ tabs.forEach(tab => {
         }
     })
 })
+
+generateHome()
