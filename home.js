@@ -1,20 +1,23 @@
 export function generateHome(){
     const content = document.querySelector("#content")
 
+    const top = document.createElement("div")
+    top.id = "top"
     const heading = document.createElement("h1")
     heading.textContent = "The Heart of Positano"
-    content.appendChild(heading)
+    top.appendChild(heading)
 
     const story = document.createElement("p")
     story.textContent = "In the bustling heart of Naples, Italy, a young boy named Tony dreamt of a life filled with the aroma of fresh basil and the sizzle of wood-fired ovens. From humble beginnings as a dishwasher, Tony's journey through the local kitchens and the breathtaking Amalfi Coast ignited a passion for culinary perfection."+
-    "It was in the enchanting town of Positano where Tony found his true inspiration, creating memories that would shape his destiny. With a heart full of dreams, he crossed the ocean to America, determined to bring a slice of Italian heaven to a new world." +
-    "In February 1993, Tony's dream blossomed into reality with the opening of Positano Pizza & Ristorante. Here, every dish is crafted with love and tradition, echoing the flavors of his beloved Positano." +
-    "Today, Tony's family-operated restaurant stands as a beacon of authentic Italian cuisine, drawing locals from New Hyde Park, Mineola, Williston Park, Garden City, and Manhasset. Each visit to Positano Pizza & Ristorante is not just a meal, but a journey to the heart of Italy, where passion and flavor unite. Come, be a part of our story, and savor the essence of Positano."
-    content.appendChild(story)
+    " It was in the enchanting town of Positano where Tony found his true inspiration, creating memories that would shape his destiny. With a heart full of dreams, he crossed the ocean to America, determined to bring a slice of Italian heaven to a new world." +
+    " In February 1993, Tony's dream blossomed into reality with the opening of Positano Pizza & Ristorante. Here, every dish is crafted with love and tradition, echoing the flavors of his beloved Positano." +
+    " Today, Tony's family-operated restaurant stands as a beacon of authentic Italian cuisine, drawing locals from New Hyde Park, Mineola, Williston Park, Garden City, and Manhasset. Each visit to Positano Pizza & Ristorante is not just a meal, but a journey to the heart of Italy, where passion and flavor unite. Come, be a part of our story, and savor the essence of Positano."
+    top.appendChild(story)
+    content.appendChild(top)
 
     const business_hours = document.createElement("div")
     business_hours.id = "business-hours-container"
-    const business_hours_heading = document.createElement("h3")
+    const business_hours_heading = document.createElement("h2")
     business_hours_heading.textContent = "Business Hours"
     const business_hours_table = document.createElement("table")
 
@@ -37,4 +40,21 @@ export function generateHome(){
     business_hours.appendChild(business_hours_heading)
     business_hours.appendChild(business_hours_table)
     content.appendChild(business_hours)
+
+
+    const info = document.createElement("div")
+    info.id = "info"
+    const line_1 = document.createElement("p")
+    line_1.textContent = "406 Hillside Ave"
+    info.appendChild(line_1)
+
+    const line_2 = document.createElement("p")
+    line_2.textContent = "Williston Park, NY 11596"
+    info.appendChild(line_2)
+
+    const line_3 = document.createElement("p")
+    line_3.textContent = "(516) 877-7839"
+    info.appendChild(line_3)
+
+    content.appendChild(info)
 }
