@@ -6,7 +6,7 @@ export function generateMenu(){
     content.appendChild(heading)
 
     const menus = {
-        "Dine In": "https://irp.cdn-website.com/6904e732/files/uploaded/19610%20positano_afnwY1ivQsuuoGoEK6fu.pdf",
+        "Dine In": "https://irp.cdn-website.com/6904e732/files/uploaded/25275%20POsitano%20Dinner%20%281%29.pdf",
         "Catering": "https://irp.cdn-website.com/6904e732/files/uploaded/19610%20positano_afnwY1ivQsuuoGoEK6fu.pdf",
         "Take Out": "https://irp.cdn-website.com/6904e732/files/uploaded/25274%20Positano%20%281%29_52gvyJFqSiSb3vLeXR8P.pdf",
         "Lunch To Go": "https://irp.cdn-website.com/6904e732/files/uploaded/14010%20Positano%20lunch%20special%20%281%29.pdf",
@@ -20,5 +20,19 @@ export function generateMenu(){
         menu_element.classList.add("menu")
         menu_element.textContent = menu
         menus_container_element.appendChild(menu_element)
+
+    })
+
+    const pdf_display = document.createElement("object")
+    pdf_display.className = "pdf"
+    pdf_display.data = "https://irp.cdn-website.com/6904e732/files/uploaded/25274%20Positano%20%281%29_52gvyJFqSiSb3vLeXR8P.pdf"
+    pdf_display.width = "800"
+    pdf_display.height = "500"
+    content.appendChild(pdf_display)
+    const menu_elements = document.querySelectorAll(".menu")
+    menu_elements.forEach(menu_element => {
+        menu_element.addEventListener("click", event => {
+            pdf_display.data = menus[menu_element.textContent]
+        })
     })
 }
