@@ -1,15 +1,10 @@
 import './style.css'
-import {generateHome} from "../home";
 import {generateMenu} from "../menu";
-import {generateAbout} from "../about";
-import {generateContact} from "../contact";
+import {generateHome} from "../home";
 
-const nav = document.querySelector("nav")
-const buttons = nav.querySelectorAll("button")
-
-buttons.forEach(button => {
-    button.addEventListener("click", event => {
-        console.log(button)
+const tabs = document.querySelectorAll("h2")
+tabs.forEach(tab => {
+    tab.addEventListener("click", event => {
         const content_area = document.querySelector("#content")
         content_area.innerHTML = ""
 
@@ -18,17 +13,14 @@ buttons.forEach(button => {
             existingElement.classList.remove("active-tab")
         }
 
-        const to_be_active_button = document.getElementById(`${button.id}`)
+        const to_be_active_button = document.getElementById(`${tab.id}`)
         to_be_active_button.classList.add("active-tab")
 
-        if (button.id === "home") {
-            generateHome()
-        } else if (button.id=== "menu") {
+
+        if (tab.id=== "menu") {
             generateMenu()
-        } else if (button.id === "about") {
-            generateAbout()
         } else {
-            generateContact()
+            generateHome()
         }
     })
 })
