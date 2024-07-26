@@ -27,7 +27,7 @@ export function generateMenu(){
     pdf_display.className = "pdf"
     pdf_display.data = "https://irp.cdn-website.com/6904e732/files/uploaded/25274%20Positano%20%281%29_52gvyJFqSiSb3vLeXR8P.pdf"
     pdf_display.width = "800"
-    pdf_display.height = "500"
+    pdf_display.height = "700"
     content.appendChild(pdf_display)
     const menu_elements = document.querySelectorAll(".menu")
     menu_elements.forEach(menu_element => {

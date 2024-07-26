@@ -41,7 +41,6 @@ h2 {
     font-size: 55px;
 }
 
-
 .active-tab {
     text-decoration: underline;
     text-decoration-thickness: 4px;
@@ -54,7 +53,7 @@ h2 {
     padding: 30px 60px 20px 60px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 30px;
     align-items: center;
 }
 
@@ -85,7 +84,12 @@ td {
     text-align: center;
 }
 
+#info {
+    font-weight: bold;
+}
+
 #menus_container {
+    margin-top: -40px;
     display: flex;
     flex-direction: row;
     gap: 20px;
